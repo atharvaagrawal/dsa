@@ -1,0 +1,46 @@
+Linked List: Add Push Append
+             Deletion
+             Delete all Elements
+             Count all Nodes
+             Reverse Linked List
+
+Circular Linked List: Traverse
+                      Deletion         
+                      Count Nodes
+                      Convert Linked List to Circular Linked List
+                
+Double Linked List: PUSH   Insert
+                    Add to Last
+                    Traverse
+                    Deleting
+
+Stack :  Push Pop 
+        Stack Operations
+
+Queue:  Queue Implementation
+        Circular Queue
+
+Binary Search Tree:    Creation Insertion Deletion Searching   
+                        InOrder Traversal
+                        PreOrder Traversal
+                        PostOrder Traversal
+
+Hashing:: Hash Chaining with linked List
+            Linear Hash Shifting
+            Square hash Shifting
+    
+AVL Tree:   Creating and Deletion
+            Finding Balance Factor
+            Left Left and Right Right Rotation
+            LR and RL Rotation
+        
+Heap: Max Min Heap  
+      Insertion and Deletion
+
+Sorting Algorithm:
+  Selection Sort
+  Bubble Sort
+  Insertion Sort
+  Quick Sort
+  Counting Sort
+  Merge Sort
