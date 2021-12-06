@@ -60,8 +60,8 @@ class DoublyLinkedList:
         tail.next = new_node
         new_node.prev = tail
 
-    # Delete a Node
-    def delete(self, del_val):
+    # Delete a Node at Head
+    def delete_head(self, del_val):
         if self.head == del_val:
             self.head = del_val.next
 
@@ -70,6 +70,32 @@ class DoublyLinkedList:
 
         if del_val.prev is not None:
             del_val.prev.next = del_val.next
+
+    # Delete at Giving Value
+    def delete_at_val(self, del_val):
+        if (self.head == None):
+            return
+
+        temp = self.head
+        fact = 0
+
+        while temp:
+            if temp.val == del_val:
+                fact = 1
+                break
+
+            temp = temp.next
+
+        if fact == 0:
+            return
+
+        if temp.next is not None:
+            temp.next.prev = temp.prev
+
+        temp.prev.next = temp.next
+
+        temp.next = None
+        temp.prev = None
 
     # List to Linked List
     def list_2_linked_listI(self, l):
@@ -110,4 +136,7 @@ dll.insert_at_position(dll.head.next.next, 25)
 print(dll)
 
 dll.insert_at_tail(60)
+print(dll)
+
+dll.delete_at_val(40)
 print(dll)
