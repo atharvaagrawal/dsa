@@ -1,0 +1,52 @@
+How many Data Structures and Algorithms problems are you able to solve? Here's a list of mostly asked questions:
+1. Find a pair with the given sum in an array
+2. Check if a subarray with 0 sum exists or not
+3. Print all subarrays with 0 sum
+4. Sort binary array in linear time
+5. Find maximum length subarray having a given sum
+6. Find the largest subarray having an equal number of 0’s and 1’s
+7. Find the maximum product of two integers in an array
+8. Sort an array of 0’s, 1’s, and 2’s (Dutch National Flag Problem)
+9. In-place merge two sorted arrays
+10. Merge two arrays by satisfying given constraints
+11. Find index of 0 to be replaced to get the maximum length sequence of continuous ones
+12. Shuffle an array using Fisher–Yates shuffle algorithm
+13. Rearrange an array with alternate high and low elements
+14. Find equilibrium index of an array
+15. Find the largest subarray formed by consecutive integers
+16. Boyer–Moore Majority Vote Algorithm
+17. Move all zeros present in an array to the end
+18. Replace every array element with the product of every other element
+19. Longest Bitonic Subarray Problem
+20. Find maximum difference between two array elements that satisfies given constraints
+21. Maximum Sum Subarray Problem (Kadane’s Algorithm)
+22. Print continuous subarray with maximum sum
+23. Maximum Sum Circular Subarray
+24. Find all distinct combinations of a given length – I
+25. Find all distinct combinations of a given length – II
+26. Find maximum sequence of continuous 1’s formed by replacing at-most k 0’s by 1’s
+27. Find minimum sum subarray of size k
+28. Maximum Product Subarray Problem
+29. Find a subarray having the given sum in an integer array
+30. Find the smallest subarray length whose sum of elements is greater than k
+31. Find the smallest window in an array sorting which will make the entire array sorted
+32. Find maximum sum path involving elements of given arrays
+33. Find maximum profit earned by buying and selling shares any number of times
+34. Trapping Rain Water Problem
+35. Find minimum platforms needed to avoid delay in the train arrival
+36. Decode an array constructed from another array
+37. Sort an array in one swap whose two elements are swapped
+38. Find a triplet with the given sum in an array
+39. Find the longest continuous sequence length with the same sum in given binary arrays
+40. Reverse every consecutive m-elements of a subarray
+41. Maximum Product Subset Problem
+42. Find pairs with difference k in an array
+43. 4–Sum Problem | Quadruplets with a given sum
+44. Print all quadruplets with a given sum | 4 sum problem extended
+45. Quickselect Algorithm
+46. Rearrange array such that A[A[i]] is set to i for every element A[i]
+47. Print all triplets that form an arithmetic progression
+48. Print all triplets that form a geometric progression
+49. Group elements of an array based on their first occurrence
+50. Find minimum difference between the index of two given elements present in an array
+#algorithms #datastructures #indeedinspiring
