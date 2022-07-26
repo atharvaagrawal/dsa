@@ -1,0 +1,102 @@
+/* Stack all operation using single linked list */
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+  int data;
+  struct node* link;
+};
+struct node* top=NULL;
+
+void push();
+void traverse();
+void pop();
+
+int main()
+{
+   int ch;
+
+   while(1)
+   {
+      printf("\n\n Stack Operation using Linked List: \n ");
+      printf("\n 1.Push ");
+      printf("\n 2.Pop");
+      printf("\n 3.Traverse");
+      printf("\n 4.Quit");
+
+      printf("\n\n Enter your choice(1/2/3/4): ");
+      scanf("%d",&ch);
+
+      switch(ch)
+      {
+    	 case 1: push();
+	        	 break;
+
+	     case 2: pop();
+		         break;
+
+	     case 3: traverse();
+		         break;
+
+	     case 4: exit(0);
+		          break;
+
+	      default: printf("\n Invalid Choice");
+      }
+   }
+  return 0;
+}
+
+void push()
+{
+  struct node* temp;
+
+  temp=(struct node*)malloc(sizeof(struct node));
+
+  printf("\n\n Enter node data: ");
+  scanf("%d",&temp->data);
+
+  temp->link=top;
+  top=temp;
+}
+
+void pop()
+{
+  struct node *temp;
+
+  temp=top;
+
+  if(top==NULL)
+  {
+    printf("\n No element");
+  }
+  else
+  {
+   temp=top;
+   printf("\n Element: %d",temp->data);
+
+   top=temp->link;
+   temp->link=NULL;
+   free(temp);
+  }
+}
+void traverse()
+{
+  struct node* temp;
+
+  if(top==NULL)
+  {
+    printf("\n Stack is Empty");
+  }
+  else
+  {
+     temp=top;
+
+     while(temp!=NULL)
+     {
+       printf("\n %d ",temp->data);
+       temp=temp->link;
+     }
+  }
+}

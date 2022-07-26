@@ -1,0 +1,99 @@
+/*Queue implementation using static array*/
+#include<stdio.h>
+#include<conio.h>
+#define CAPACITY 5
+
+int queue[CAPACITY];
+int front=0,rear=0;
+
+void insert();
+void delete();
+void traverse();
+
+void main()
+{
+   int ch;
+   clrscr();
+
+   while(1)
+   {
+     printf("\n Queue Operations:= ");
+     printf("\n1. Insert");
+     printf("\n2. Delete");
+     printf("\n3. Traverse(display)");
+     printf("\n4. Quit");
+
+     printf("\n\n Enter your choice(1/2/3/4)= ");
+     scanf("%d",&ch);
+
+     switch(ch)
+     {
+       case 1: insert();
+	      break;
+       case 2: delete();
+	      break;
+       case 3: traverse();
+	      break;
+       case 4: exit(0);
+	      break;
+
+       default: printf("\n\n Wrong Choice");
+	 }
+   }
+   getch();
+}
+void insert()
+{
+  if(rear==CAPACITY)
+  {
+    printf("\n Queue is Full");
+  }
+  else
+  {
+     int ele;
+
+     printf("\n Enter any element: ");
+     scanf("%d",&ele);
+
+     queue[rear]=ele;
+     rear++;
+  }
+}
+
+void delete()
+{
+   int i;
+
+   if(front==rear)
+   {
+     printf("\n Queue is Empty");
+   }
+   else
+   {
+     printf("\n Deleted element %d ",queue[front]);
+
+     for(i=0;i<rear-1;i++)
+     {
+       queue[i]=queue[i+1];
+     }
+     rear--;
+   }
+}
+
+void traverse()
+{
+   int i;
+   if(front==rear)
+   {
+     printf("\n Queue is Empty");
+   }
+   else
+   {
+      printf("\n Queue Elements: ");
+
+      for(i=front;i<rear;i++)
+      {
+	 printf("\n %d",queue[i]);
+      }
+   }
+}

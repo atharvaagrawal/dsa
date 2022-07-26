@@ -1,0 +1,52 @@
+/* Radix Sort for 0-9 */
+#include<stdio.h>
+#include<conio.h>
+
+
+void main()
+{
+  
+  int i,a[5],j,bucket[10][5]={0};
+
+  int rem,k=0;
+
+  clrscr();
+
+  //1.Accept
+
+  printf("\n\n Enter 5 elements= ");
+  for(i=0;i<5;i++)
+    scanf("%d",&a[i]);
+
+
+ //2.Sort
+ for(i=0;i<5;i++)
+  {
+    rem=a[i] % 10;
+    bucket[rem][i]=a[i];
+  }
+
+
+  for(i=0;i<10;i++)
+  {
+    for(j=0;j<5;j++)
+    {
+      if(bucket[i][j] != 0)
+      {
+	 a[k]=bucket[i][j];
+	 k++;
+      }
+    }
+  }
+  
+  //3.Display after sort
+  printf("\n\n Display after sort : ");
+  for(i=0;i<5;i++)
+  {
+      printf(" %d  ",a[i]);
+  }
+
+  getch();
+}
+
+

@@ -4,7 +4,7 @@ def mergeSort(array):
 
         mid = len(array) // 2
         left = array[:mid]
-        right = array[mid:]
+        right = array[mid:]  
 
         mergeSort(left)
         mergeSort(right)

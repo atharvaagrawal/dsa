@@ -1,0 +1,176 @@
+/* Adjacent Node Swap and Reverse all element in a single linked list */
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+
+void swap();
+void reverse();
+void traverse();
+void append();
+int length();
+
+struct node
+{
+  int data;
+  struct node *link;
+};
+struct node *root=NULL;
+
+void main()
+{
+   int ch;
+   clrscr();
+
+   while(1)
+   {
+     printf("\n\n Linked list operation: ");
+     printf("\n 1.Append");
+     printf("\n 2.Swap");
+     printf("\n 3.Reverse");
+     printf("\n 4.Traverse");
+     printf("\n 5.Quit ");
+
+     printf("\n\n Enter your choice(1/2/3/4/5): ");
+     scanf("%d",&ch);
+
+     switch(ch)
+     {
+	case 1: append();
+		break;
+
+	case 2: swap();
+		break;
+
+	case 3: reverse();
+		break;
+
+	case 4: traverse();
+		break;
+
+	case 5: exit(1);
+		break;
+
+       default: printf("\n Invalid Choice");
+     }
+   }
+ getch();
+}
+
+void append()
+{
+  struct node* temp;
+  temp=(struct node*)malloc(sizeof(struct node));
+  printf("\n Enter node data= ");
+  scanf("%d",&temp->data);
+  temp->link = NULL;
+
+  if(root==NULL)
+  {
+      root=temp;
+  }
+  else
+  {
+    struct node* p;
+    p=root;
+
+    while(p->link != NULL)
+    {
+       p=p->link;
+    }
+    p->link=temp;
+
+  }
+}
+
+int length()
+{
+   int count=0;
+   struct node* temp;
+   temp=root;
+
+   while(temp!=NULL)
+   {
+     count++;
+     temp=temp->link;
+   }
+   return count;
+}
+
+
+
+void traverse()
+{
+    struct node* temp;
+    temp=root;
+
+    if(temp==NULL)
+    {
+      printf("\n No nodes in the list");
+    }
+    else
+    {
+       while(temp!=NULL)
+       {
+	 printf("\n %d",temp->data);
+	 temp=temp->link;
+       }
+    }
+}
+
+void swap()
+{
+  int i=1,loc;
+  struct node *p,*q,*r;
+  printf("\n\n Enter location to swap: ");
+  scanf("%d",&loc);
+  p=root;
+
+  if(loc>length())
+  {
+    printf("\n Invalid Location");
+    printf("\n Avaliable Location %d",length() );
+  }
+  else
+  {
+    while(i<loc-1)
+    {
+       p=p->link;
+       i++;
+    }
+    q=p->link;
+    r=q->link;
+    q->link=r->link;
+    r->link=q;
+    p->link=r;
+   }
+}
+
+void reverse()
+{
+  int i,j,len,k;
+  struct node *p,*q;
+
+  len=length();
+  i=0;
+  j=len-1;
+
+  p=q=root;
+
+  while(i<j)
+  {
+    k=0;
+    while(k<j)
+    {
+     q=q->link;
+     k++;
+    }
+    temp=p->data;
+    p->data=q->data;
+    q->data=temp;
+
+    i++;
+    j--;
+    p=p->link;
+    q=root;
+  }
+}

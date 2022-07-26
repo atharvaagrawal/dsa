@@ -1,0 +1,95 @@
+/* Radix Sort */
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+  int a[5],i,j,k,max,temp,bucket[10][5]={0};
+
+  int rem,count=1,div=1,d=10,count1=0,no;
+
+  clrscr();
+
+  //1.Accept
+  printf("\n\n Enter 5 elements= ");
+  for(i=0;i<5;i++)
+    scanf("%d",&a[i]);
+
+  //2.Max
+  max=a[0];
+  for(i=0;i<5;i++)
+  {
+     if( max < a[i] )
+       max=a[i];
+  }
+
+  //3. Radix Sort
+  while (max / div >  0)
+  {
+    int bucket[10][5]={0};
+
+    for(i=0;i<5;i++)
+    {
+      if(count==1)
+	 rem=a[i] % 10;
+      else
+      {
+	temp=a[i];
+	count1=1;
+	no=temp;
+
+	for(j=0;j<count;j++)
+	{
+	  if(count==count1)
+	  {
+	    rem=no%10;
+	    break;
+	  }
+	  else
+	    no=no/10;
+
+	  count1++;
+	}
+      }
+
+     bucket[rem][i]=a[i];
+   }
+   k=0;
+     for(i=0;i<10;i++)
+     {
+       for(j=0;j<5;j++)
+	  if(bucket[i][j] != 0)
+	  {
+	      a[k]=bucket[i][j];
+	      k++;
+	  }
+     }
+    d=d*10;
+    div=div*10;
+    count++;
+  }
+
+  // Display After Sorting
+  printf("\n After Sorting: ");
+  for(i=0;i<5;i++)
+    printf(" %d ",a[i]);
+
+  getch();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

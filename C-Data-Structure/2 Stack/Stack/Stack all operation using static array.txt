@@ -1,0 +1,132 @@
+/*Program to impelement all st	ack operation using static array */
+
+#include<stdio.h>
+#include<conio.h>
+#define CAPACITY 5 //preprocess macro
+
+void push(int ele);
+int pop();
+int peek();
+void traverse();
+int isFull();
+int isEmpty();
+
+int top=-1 , stack[CAPACITY];
+void main()
+{
+  int ch ,item ;
+  clrscr();
+
+  while(1)
+  {
+     printf("\n\n Menu: ");
+
+     printf("\n 1.Push ");
+     printf("\n 2.Pop ");
+     printf("\n 3.Peek ");
+     printf("\n 4.Traverse");
+     printf("\n 5.Quit");
+
+	     printf("\n\n Enter Your Choice (1/2/3/4) = ");
+     scanf("%d",&ch);
+
+     switch(ch)
+     {
+
+       case 1 :printf("\n\n Enter any element = ");
+	       scanf("%d",&item);
+	       push(item);
+	       break;
+
+       case 2 : item = pop();
+	       if(item==0)
+	       {
+		 printf("\n Stack is underflow");
+	       }
+	       else
+	       {
+		 printf("\n Popped item: %d \n ,item");
+	       }
+	       break;
+
+       case 3 : peek();
+	       break;
+
+       case 4 : traverse();
+	       break;
+
+       case 5 : exit();
+	       break;
+
+      default: printf("\n\n Invalid Input");
+     }
+  }
+  getch();
+}
+
+void push(int ele)
+{
+  if(isFull())
+    printf("\n Stack is full");
+  else
+ {
+    top++;
+    stack[top]=ele;
+    printf("\n %d inserted",ele);
+ }
+}
+
+int pop()
+{
+  int ele;
+
+  if(isEmpty())
+    return 0;
+  else
+  {
+    ele=stack[top];
+    top--;
+  }
+  return pop;
+}
+
+int peek()
+{
+   if( isEmpty() )
+     return 0;
+   else
+     return stack[top];
+}
+
+void traverse()
+{
+  int i;
+
+  if( isEmpty() )
+    printf("\n\n No element");
+  else
+  {
+     printf("\n\n Stacks element are: ");
+
+     for(i=0;i<=top;i++)
+     {
+       printf("%d\n",stack[i]);
+     }
+  }
+}
+
+int isFull()
+{
+  if(top == CAPACITY-1)
+    return 1;
+  else
+    return 0;
+}
+
+int isEmpty()
+{
+  if(top== -1)
+    return 1;
+  else
+    return 0;
+}
