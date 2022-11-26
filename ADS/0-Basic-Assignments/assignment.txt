@@ -1,0 +1,11 @@
+Q9.Scan a number from user.Print addition of its digits recursively.
+
+Q10.Scan 6 strings from user.Sort them in ascending order.
+
+Q11.Keep scannning a string from user until user enters STOP recursively.Print length of each string.
+
+Q12.WAP to implement insertion sort.
+
+Q13.WAP to implement quick sort.
+
+Q14.WAP to implement merge sort.

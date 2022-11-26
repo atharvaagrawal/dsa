@@ -1,0 +1,37 @@
+Q1.WAP to implement topological sort.
+
+Q2.Scan adjacency matrix for directed graph.
+Check if this graph is connected or not from given source vertex.
+
+Q3.Scan adj matrix for a directed graph.Check if graph is cyclic or not.
+
+Q4.Create a binary tree.Make exact copy of the binary tree.
+
+Q5.Scan edges from user for an undirected graph.Create adjacency list.Perform nonrecursive 
+DFS to check if graph is connected or not.Print number of components of a graph.
+
+Q6.Create a database of Students using Binary Search Tree.Database must contain rollnumber(key for BST),
+name,hometown,birthdate of student.One must be able to search student by rollnumber,update the data of student
+and delete the student.
+
+Q7.WAP to create a dictionary.Dictionary will contain words with their meaning.
+One word can have multiple meanings.User should be able to add new words with meaning.
+He may add  extra meanings to existing words.He should be able to delete meaning of a word.
+He should be able to delete word also.When he deletes word,all of its meanings should 
+also get deleted.User can not add only word.If he adds word,he has to add atleast one meaning.
+He should be able to search word nand find its meanings.One word should not be added more than twice.
+Handle capital small possibility.
+Decide the proper datastructure to create the dictionary and implement options.For strings,
+you can use string datatype from CPP.
+
+Q8.WAP to color your graph using given 4 colors(r,g,b,y).Print all the possible combinations of colors
+which can be used to color vertices of graph. No 2 adjacent vertices can have same color.
+
+Q9.Scan adj matrix for graph from user.Scan number of colors from user.Check if these colors 
+are enough to color the graph such that no 2 adj vertices can have same colors.If colors are enough 
+print all the possible combinations of colors.If given colors are not enough,tell him
+minimum number of colors required to color his graph.
+
+Q10.Scan adjacency matrix of graph.Find transitive closure by using matrix multiplication.
+Use operator overloading to find powers of matrix and addition of matrix.
+
