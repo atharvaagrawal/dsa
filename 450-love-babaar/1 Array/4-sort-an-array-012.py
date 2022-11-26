@@ -1,7 +1,6 @@
 # https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s4231/1
 
 #User function Template for python3
-
 class Solution:
     def sort012(self,arr,n):
         

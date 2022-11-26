@@ -2,11 +2,11 @@
 
 class QueueWithS:
     def __init__(self):
-        self.s1 = []
+        self.res = []
         self.s2 = []
 
     def is_empty(self):
-        if len(self.s2) + len(self.s1) == 0:
+        if len(self.s2) + len(self.res) == 0:
             return True
         else:
             return False
@@ -17,19 +17,19 @@ class QueueWithS:
         if self.is_empty():
             return "Empty"
 
-        output = str(self.s1) + str(self.s2)
+        output = str(self.res) + str(self.s2)
         return output
 
     def enque(self, val):
-        self.s1.append(val)
+        self.res.append(val)
 
     def deque(self):
         if self.is_empty():
             return "Empty"
 
         if len(self.s2) == 0:
-            while len(self.s1) > 0:
-                self.s2.append(self.s1.pop())
+            while len(self.res) > 0:
+                self.s2.append(self.res.pop())
             print(self.s2)
 
         return self.s2.pop()

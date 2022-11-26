@@ -1,0 +1,31 @@
+
+
+eerrrroorrggoorrnn
+
+count 
+e = 2
+r = 8
+o = 4
+g = 2
+n = 2
+
+erognrorrrrorngore
+
+r gnororerrerorong r
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int tc;
+	cin>>tc;
+	while(tc--){
+	 string s;
+	 cin>>s;
+	 sort(s.begin(), s.end());
+	 string str = s;
+	 reverse(s.begin(), s.end());
+	 cout<<str+s<<endl;
+	}
+	return 0;
+}

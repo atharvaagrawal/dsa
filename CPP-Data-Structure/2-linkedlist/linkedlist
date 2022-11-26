@@ -1,0 +1,98 @@
+0)WAP to create DLL and implement following functions.
+-create()
+-show()
+-showrev()
+-addatbeg()
+-addatend()
+-addbypos()
+-delatbeg()
+-delatend()
+-delbypos()
+
+2)WAP to create DCLL and implement following functions.
+-create()
+-show()
+-showrev()
+-addatbeg()
+-addatend()
+-addbypos()
+-delatbeg()
+-delatend()
+-delbypos()
+
+3)Create a linkedlist for students of your class using following class Node.
+Implement the following functions.
+
+class Student/Node
+{
+public:
+char name[30];
+int age;
+int roll;
+Node \* next;
+};
+
+-searchbyname()
+-searchbyrollnumber()
+-addatbeg()
+-addatend()
+-insert()
+-deletebyname()
+-deletebyroll()
+-sortbyname()
+-sortbyroll()
+
+2)Repeat above question using composition.
+
+class Student
+{
+public:
+char name[30];
+int age;
+int roll;
+void getstudent();
+void showstudent();
+};
+
+class Node
+{
+public:
+Student stud;
+Node \* next;
+};
+
+class SLL
+{
+
+};
+
+3)Create 2 linkedlists of integers.Sort them in ascending order.
+Now merge these two lists in third list in such a way that the
+third list should be sorted.Do not sort resultant list after merging.
+
+4)Scan a number from user.Store its 16 bit binary using linked list.
+
+16.Create an SLL.Implement only following functions.
+-addatbeg()
+-addatend()
+-show()
+-showrec()
+-showrecrev()
+-count()
+-countrec()
+-searchrec()
+-gethead()
+-makeEmpty()
+-makeEmptyrec()
+
+17.Create a CLL.Implement following functions.
+-create()
+-show()
+-search()
+-count()
+-addatbeg()
+-addatend()
+-addbypos()
+-delatbeg()
+-delatend()
+-delbypos()

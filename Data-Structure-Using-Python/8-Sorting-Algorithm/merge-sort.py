@@ -1,7 +1,5 @@
 def mergeSort(array):
-
     if len(array) > 1:
-
         mid = len(array) // 2
         left = array[:mid]
         right = array[mid:]  
@@ -11,6 +9,9 @@ def mergeSort(array):
 
         i = j = k = 0
 
+        print("\n\nleft:",left)
+        print("right:",right)
+        
         while(i < len(left) and j < len(right)):
             if left[i] < right[j]:
                 array[k] = left[i]
@@ -32,9 +33,10 @@ def mergeSort(array):
             j += 1
             k += 1
 
+    print("Element: ",array,id(array))
 
 array = [6, 5, 20, 10, 9, 2]
 print(array)
 mergeSort(array)
 
-print(array)
+print(array,id(array))
