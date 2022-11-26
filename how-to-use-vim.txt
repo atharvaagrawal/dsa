@@ -1,0 +1,53 @@
+VIM Modes:
+i  insert 
+:  command
+v  visual
+
+:q  quit
+:q! quit and discard changes
+:wq save and quit
+
+To Move:
+H   left 
+J   down
+K   Up 
+L   right 
+
+x   to delete a character
+dd  to delete a line 
+u   to undo 
+
+:set number 
+
+:2  go to line 2
+
++p  paste from system clipboard 
+yy  copy the current line 
+d   cut 
+
+V to select the entire line and press y to copy it 
+v to select from where your cursor is 
+
+:w  save
+
+:!python test.py  run directly
+
+:sh
+rm textfile.xml
+
+-----------------------------------------------------
+Configured:
+-----------------------------------------------------       
+
+space d  : to delete a line
+tab      : to switch between files
+space e  : to open explore
+space f  : to get into explore 
+space w  : to split the editor
+
+
+shift+alt+j : to move selected code
+shift+k     : to hover
+ctrl+n      : create a new file/folder in any location 
+
+ctrl+;      : to open terminal

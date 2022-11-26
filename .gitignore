@@ -4,3 +4,4 @@ test
 test.py
 *.exe
 *.out
+*.ipynb_checkpoints
