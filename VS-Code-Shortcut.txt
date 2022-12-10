@@ -1,4 +1,5 @@
 mv ~/.cache/sessions ~/.cache/sessions.bak
+xfwm4 --replace 
 
 1. Toggle sidebar: ctrl/cmd + B
 2. Toggle Terminal: ctrl/cmd + `

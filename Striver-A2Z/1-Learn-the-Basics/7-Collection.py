@@ -10,6 +10,9 @@ print(my_counter.items())
 print(my_counter.values())
 print(my_counter.most_common(2))
 
+for i in my_counter:
+    print(i,my_counter[i])
+
 
 from collections import namedtuple
 

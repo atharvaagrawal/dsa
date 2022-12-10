@@ -15,8 +15,7 @@ print(gcd)
 
 def gcd_(a,b):
     if b == 0:
-        return a
-    
+        return a    
     return gcd_(b,a%b)
 
 print(gcd_(num1,num2))
@@ -24,4 +23,4 @@ print(gcd_(num1,num2))
 # LCM
 lcm = (num1 * num2) // gcd
 
-print("LCM:",lcm)
+print("LCM:",lcm) 
