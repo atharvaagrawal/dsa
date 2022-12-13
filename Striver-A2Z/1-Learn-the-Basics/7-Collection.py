@@ -38,7 +38,10 @@ df['a'] = 1
 df['c'] = 2
 
 print(df['d'])
-
+a = dict()
+a = defaultdict(lambda:0,a)
+print(a[0])
+print(a[1])
 
 from collections import deque
 d = deque()
