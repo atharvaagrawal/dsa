@@ -1,6 +1,11 @@
 mv ~/.cache/sessions ~/.cache/sessions.bak
 xfwm4 --replace 
 
+GIT Commands:
+-------------
+git add .
+git commit -m "LC-Contest-324"
+
 1. Toggle sidebar: ctrl/cmd + B
 2. Toggle Terminal: ctrl/cmd + `
 3. Open settings: ctrl/cmd + ,
