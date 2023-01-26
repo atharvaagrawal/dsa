@@ -5,3 +5,4 @@ test.py
 *.exe
 *.out
 *.ipynb_checkpoints
+*.idea

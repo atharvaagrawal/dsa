@@ -1,5 +1,6 @@
 # https://practice.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
 
+# Given and integer N. Calculate the sum of series 1^3 + 2^3 + 3^3 + 4^3 + … till N-th term.
 
 # TLE
 def sumOfSeries(N):
@@ -14,9 +15,12 @@ def sumOfSeries(N):
 
 def sumOfSeries_(n):
         n = n*(n+1)//2
-        
+
+        print(n)
+
         res = n*n
-        
+
         return res
 
-print(sumOfSeries_(10))
+print(sumOfSeries(10)) #3025
+print(sumOfSeries_(10)) #3025

@@ -5,7 +5,8 @@ def reverseList(A, start, end):
         A[start], A[end] = A[end], A[start]
         start += 1
         end -= 1
-        
+
+
 while(t>0):
     n = int(input())
     
