@@ -1,3 +1,7 @@
+# A number N is called a factorial number if it is the factorial of a positive integer. 
+# For example, 
+# the first few factorial numbers are 1, 2, 6, 24, 120,
+
 """ def factorialNumbers(self, N):
     def findFactorial(n):
     	if n == 1:

@@ -1,5 +1,9 @@
 # https://leetcode.com/problems/move-zeroes/description/    
-def moveZeroes(self, arr: List[int]) -> None:
+
+# Input: nums = [0,1,0,3,12]
+# Output: [1,3,12,0,0]
+
+def moveZeroes(arr):
         """
         Do not return anything, modify nums in-place instead.
         """

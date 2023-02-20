@@ -1,4 +1,22 @@
 # https://takeuforward.org/data-structure/subarray-with-given-sum/
+
+
+""" 
+Given an array and a sum k, generate the subarray whose elements sum to k.
+
+Example 1:
+Input:
+ arr = {1, 7, 3, 9}, k = 10
+
+Output: 7 3
+Explanation:
+ Of all the subarrays, 7 and 3 sums to 10.
+
+Example 2:
+Input: arr = {2,1,3,4,5,6}, k = 10
+Output: 2 1 3 4
+Explanation: Of all the subarrays, 2, 1, 3 and 4 sums to 1
+ """
 def maxSubArray(nums):
         max_so_far = nums[0]
         max_end = 0

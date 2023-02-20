@@ -1,5 +1,6 @@
+from collections import defaultdict
 
-def missingNumber(self, nums: List[int]) -> int:
+def missingNumber(nums):
         d = {}
         d = defaultdict(lambda: 0,d)
 

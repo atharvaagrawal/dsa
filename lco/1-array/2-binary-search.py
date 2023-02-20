@@ -13,7 +13,7 @@ iteration = 0
 while(True):
     print(iteration, " Mid:", a[mid], " First/Low:",
           a[low], " High/Last:", a[high])
-    iteration += 1
+    iteration += 1  
     if(v == a[mid]):
         print("value found at:", mid)
         break
