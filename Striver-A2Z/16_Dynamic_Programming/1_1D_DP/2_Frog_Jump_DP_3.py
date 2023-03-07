@@ -3,12 +3,36 @@
  A height[N] array is also given. Whenever the geek jumps from stair i to stair j, the energy consumed in the jump 
  is abs(height[i]- height[j]), where abs() means the absolute difference. return the minimum energy that can be used 
  by the Geek to jump from stair 0 to stair N-1. 
+
+Example:
+    Input:
+        n = 4
+        height = {10 20 30 10}
+    Output:
+        20
+Explanation:
+Geek jump from 1st to 2nd stair(|20-10| = 10 energy lost).
+Then a jump from the 2nd to the last stair(|10-20| = 10 energy lost).
+so, total energy lost is 20 which is the minimum
 """
 
 """ 
-Greedy Approach:
-30 10 60 10 60 50  ans=60
+Input: 30 10 60 10 60 50 
+
+30-10 = 20
+10-10 = 0
+10-50 = 40
+--------
+20+40 = 60
+Greedy Approach ans:50
+------------------------
+30-60 = 30
+60-60 = 0
+60-50 = 10
+--------
+30+10 = 40
 using dp ans = 40
+------------------------
 
 class Solution:
     def minimumEnergy(self, height, n):
@@ -55,7 +79,7 @@ if __name__ == "__main__":
     n = len(height)
     dp = [-1] * n
     print(solve(n-1, height, dp))
- """    
+"""    
 """ 
 Memorization DP
 class Solution:
