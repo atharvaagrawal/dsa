@@ -40,6 +40,6 @@ def isPalindrome(st):
 # Driver Code
 st = "geeg"
 if (isPalindrome(st)):
-    print "Yes"
+    print("Yes")
 else:
-    print "No"
+    print("No")

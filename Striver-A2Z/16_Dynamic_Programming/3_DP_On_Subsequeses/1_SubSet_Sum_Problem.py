@@ -46,7 +46,7 @@ class Solution:
         print(solve(0, N-1)) 
 """
 
-# Memorization
+# Memoize
 """ class Solution:
     def isSubsetSum(self, N, nums, sum):
         dp = [[-1 for i in range(sum+1)] for i in range(len(nums))]

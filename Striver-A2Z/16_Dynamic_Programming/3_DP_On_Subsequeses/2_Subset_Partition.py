@@ -25,7 +25,7 @@ class Solution:
 
         dp = [[-1 for i in range(total//2+1)] for i in range(len(nums))]
         
-        # Memorization
+        # Memoize
         def solve(n,target):    
             if target == 0:
                 return 1

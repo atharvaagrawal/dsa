@@ -19,8 +19,7 @@ Explanation: {1, 2, 3, 4}, {1, 4, 5},
 """
 
 # Recursion
-
-
+""" 
 class Solution:
     def perfectSum(self, arr, n, sum):
         
@@ -60,6 +59,60 @@ arr = [2, 3, 5, 6, 8, 10]
 sum = 10
 n = len(arr)
 obj.perfectSum(arr,n,sum)
+"""
 
+# Memoize
+class Solution:
+    def perfectSum(self, arr, n, sum):
+        
+        dp = [[-1 for i in range(sum+1)] for j in range(n+1)]
+        
+        print(dp)
+        def solve(ind,k):            
+            if ind == n:
+                if sum == k:
+                    return 1
+                return 0
+            # print(ind,k,dp[ind][k])
+
+            if dp[ind][k] != -1:
+                return dp[ind][k]
+
+            if arr[ind] <= sum-k:
+                dp[ind][k] = solve(ind+1,k+arr[ind]) + solve(ind+1,k) 
+            else:
+                dp[ind][k] = solve(ind+1,k)
+
+            return dp[ind][k] 
+        
+        print(solve(0,0))
+        
+        return solve(0,0) % (10**9+7)
+
+# Tabulation
+class Solution:
+    def perfectSum(self, arr, n, sum):
+
+        dp = [[False for i in range(sum+1)] for j in range(n)]
+
+        for i in range(n):
+            dp[i][sum] = True
+
+        if arr[0] <= sum:
+            dp[0][arr[0]] = True 
+             
+     return 
+obj = Solution()
+
+n = 2
+sum = 1
+arr = [1,0]
+
+arr = [2, 3, 5, 6, 8, 10]
+n = 6
+sum = 10
+
+
+obj.perfectSum(arr,n,sum)
 
 

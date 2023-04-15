@@ -22,7 +22,7 @@ def sort(arr):
     insert(arr, temp)
 
 
-arr = [0, 1, 5, 3, 8, 9, 10, 2]
+arr = [0,9 ,1, 5, 3, 8, 10, 2]
 
 print("Before Sort:", arr)
 sort(arr)
