@@ -10,4 +10,55 @@ The picked fruits must fit in one of the baskets.
 Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 
 Given the integer array fruits , return the maximum number of fruits you can pick. 
+
+Example 1:
+Input: fruits = [1,2,1]
+Output: 3
+Explanation: We can pick from all 3 trees.
+
+Example 2:
+Input: fruits = [0,1,2,2]
+Output: 3
+Explanation: We can pick from trees [1,2,2].
+If we had started at the first tree, we would only pick from trees [0,1].
+
+Example 3:
+Input: fruits = [1,2,3,2,2]
+Output: 4
+Explanation: We can pick from trees [2,3,2,2].
+If we had started at the first tree, we would only pick from trees [1,2].
+
 """
+from collections import defaultdict
+from typing import List
+
+
+class Solution:
+    def totalFruit(self, fruits: List[int]) -> int:
+
+        count = defaultdict(int)
+
+        l, r = 0, 0
+
+        total, res = 0, 0
+
+        for r in range(len(fruits)):
+            count[fruits[r]] += 1
+
+            total += 1
+
+            # If we get more than 2 distinct fruit
+            while len(count) > 2:
+                # Reduce the count
+                count[fruits[l]] -= 1
+                total -= 1
+
+                if not count[fruits[l]]:
+                    count.pop(fruits[l])
+
+                # increment the left pointer
+                l += 1
+
+            res = max(total, res)
+
+        return res
