@@ -24,4 +24,4 @@ This repository contains implementation of various data structures and algorithm
 
 # Coding Profile
 
-- [LeetCode](https://leetcode.com/atharva7199990/)
+- [LeetCode](https://leetcode.com/atharva-agrawal/)
