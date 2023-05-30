@@ -16,28 +16,29 @@ Floor of 7 is 6 and ceil of 7
 is 8.
 """
 
+
 def getFloorAndCeil(arr, n, x):
     # code here
     c = -1
     f = -1
     c1 = 0
-    
+
     for i in arr:
         if i > x:
             if c1 == 0:
                 c = i
-                c1+=1
+                c1 += 1
             else:
-                c = min(c,i)
+                c = min(c, i)
         if i < x:
-            f = max(f,i)
-        
+            f = max(f, i)
+
         if i == x:
             c = i
             f = i
             break
-        
-    return [f,c]
+
+    return [f, c]
 
 
 N = 8
