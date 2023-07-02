@@ -17,14 +17,35 @@ Input: nums = [1,3,5,6], target = 7
 Output: 4 
 """
 
-from typing import List 
+from typing import List
+
+
+class Solution2:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        low = 0
+        high = len(nums)-1
+        flag = 0
+
+        ans = len(nums)
+
+        while low <= high:
+            mid = (low+high)//2
+
+            if nums[mid] >= target:
+                ans = mid
+                high = mid-1
+            else:
+                low = mid + 1
+
+        return ans
+
 
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         low = 0
         high = len(nums)-1
         flag = 0
-         
+
         if target > nums[high]:
             return high+1
         if target < nums[0]:
@@ -35,10 +56,10 @@ class Solution:
             # 1
             if nums[mid] == target:
                 return mid
-        
+
             if target < nums[mid]:
-                high = mid - 1  
+                high = mid - 1
             elif target > nums[mid]:
                 low = mid + 1
-        
+
         return low
