@@ -53,8 +53,8 @@ class Solution:
 
             stack.append(i)
 
-        # print(right_smaller)
-        # print(left_smaller)
+        print(right_smaller)
+        print(left_smaller)
 
         # Now we have the left and right smaller
         for i in range(n):
@@ -62,3 +62,8 @@ class Solution:
                 maxArea, (right_smaller[i]-left_smaller[i]+1) * heights[i])
 
         return maxArea
+
+
+obj = Solution()
+heights = [10, 20, 30, 50, 10, 70, 30]
+obj.largestRectangleArea(heights)
