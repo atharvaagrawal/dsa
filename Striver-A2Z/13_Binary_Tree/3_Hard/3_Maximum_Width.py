@@ -38,9 +38,9 @@ class Solution:
             mmin = queue[0][1]
             first = last = 0
 
-            # print("\n He",mmin)
-            # for i,j in queue:
-            #     print(i.val,j,end=" ")
+            # print("\n He", mmin)
+            # for i, j in queue:
+            #     print(i.val, j, end=" ")
 
             for i in range(n):
                 temp = queue.pop(0)
